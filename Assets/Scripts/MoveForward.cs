@@ -7,8 +7,8 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
     // vars
-    [SerializeField] float moveSpeed = 1f;
-    [SerializeField] MeshRenderer meshRenderer = null;
+    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private MeshRenderer meshRenderer = null;
 
     private bool isLooping = false;
 
@@ -42,10 +42,7 @@ public class MoveForward : MonoBehaviour
         meshRenderer.material.SetTextureOffset("PlaneMaterial 1", curOff);*/
 
 
-
-        Vector2 curOff = meshRenderer.material.mainTextureOffset;
-        curOff.y += moveSpeed;
-        meshRenderer.material.mainTextureOffset = curOff;
+        meshRenderer.material.mainTextureOffset -= new Vector2(0, moveSpeed * Time.deltaTime);
 
     }
 
