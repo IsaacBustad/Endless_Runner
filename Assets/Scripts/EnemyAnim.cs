@@ -9,8 +9,7 @@ public class EnemyAnim : MonoBehaviour
     [SerializeField] private float animBlend = 0;
     [SerializeField] private Animator anim = null;
 
-    // [SerializeField] private Animator anim;
-
+    
     // Methods
     private void OnEnable()
     {
@@ -28,5 +27,5 @@ public class EnemyAnim : MonoBehaviour
     }
 
     // Accessor
-    public float AnimBlend { set { if(value >=0 && value <= 2) animBlend = value; ChangeAnimBlens(); } }
+    public float AnimBlend { set { if (value >= 0 && value <= 2) { animBlend = value; } ChangeAnimBlens(); } }
 }
