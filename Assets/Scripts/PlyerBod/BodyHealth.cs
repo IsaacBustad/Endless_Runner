@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerBodyHealth : MonoBehaviour
+public class BodyHealth : MonoBehaviour
 {
     // Vars
     [SerializeField] PlayerHealth healthBar = null;
@@ -28,6 +28,10 @@ public class PlayerBodyHealth : MonoBehaviour
 
     public void TakeDammage(float aDam)
     {
-        healthBar.TakeDammage(aDam);
+        if (healthBar != null)
+        {
+            healthBar.TakeDammage(aDam);
+        }
+        //healthBar.TakeDammage(aDam);
     }
 }

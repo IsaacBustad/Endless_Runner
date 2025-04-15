@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ClickToFire",
+                    "type": "Button",
+                    "id": "4cd54a25-7baf-47da-8b52-d64d901b3b08",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -125,6 +134,17 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "ee9cbf60-e3fa-4d3c-a91d-434844f35a1d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClickToFire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

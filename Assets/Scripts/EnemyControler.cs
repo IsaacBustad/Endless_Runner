@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class EnemyControler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // Var
+    [SerializeField] private float moveSpeed = 5f;
+    private Rigidbody rb = null;
+
+    // Methods
+    private void OnEnable()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        MoveForward();
+    }
+
+    private void MoveForward()
+    {
+        if (rb != null)
+        {
+            rb.velocity = transform.forward * moveSpeed;
+        }
     }
 }
