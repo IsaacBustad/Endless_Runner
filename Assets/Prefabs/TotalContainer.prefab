@@ -275,6 +275,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1647427201648874833, guid: 9a15dc67507032a4ca850816449e3776, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647427201648874833, guid: 9a15dc67507032a4ca850816449e3776, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.50886154
+      objectReference: {fileID: 0}
     - target: {fileID: 1963787763159625617, guid: 9a15dc67507032a4ca850816449e3776, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.55
@@ -407,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dammage: 5
+  fireRange: 10
 --- !u!4 &8646276675496448023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 481836, guid: 9a15dc67507032a4ca850816449e3776, type: 3}

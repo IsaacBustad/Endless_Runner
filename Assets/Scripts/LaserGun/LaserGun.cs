@@ -39,6 +39,7 @@ public class LaserGun : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 10f))
         {
+            lineRenderer.enabled = true;
             endPnt = hitInfo.point;
 
             DrawLazer( hitInfo.point);
@@ -95,11 +96,17 @@ public class LaserGun : MonoBehaviour
 
     private void DrawLazer(Vector3 aPnt)
     {
+        // show line renderer
         lineRenderer.enabled = true;
+
+        // create a list of V3s for Line renderer
         List<Vector3> startStopPts = new List<Vector3>();
+
+        // add points it V3s
         startStopPts.Add(transform.position);
         startStopPts.Add(aPnt);
 
+        // set points to draw
         lineRenderer.SetPositions(startStopPts.ToArray());
     }
 

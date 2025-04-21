@@ -20,7 +20,7 @@ public class MoveRedicule : MonoBehaviour
         float posY = Mathf.Clamp(transform.localPosition.y, lowerBoundV3.y, upperBoundV3.y);
 
         //V = lazerGunTF.position + (lazerGunTF.right * posX);
-        transform.position = lazerGunTF.position + (lazerGunTF.up * posY);
+        transform.position = lazerGunTF.position + (lazerGunTF.up * posY) + (lazerGunTF.right * posX);
     }
 
 
