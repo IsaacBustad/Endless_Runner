@@ -13,6 +13,9 @@ public class LaserGun : MonoBehaviour
     private LineRenderer lineRenderer = null;
     [SerializeField] float fireRange = 10f;
 
+    // particle Vars
+    [SerializeField] private GameObject laserPS = null;
+
     // movable objects for recording
     //[SerializeField] private Transform endPose
 
@@ -68,6 +71,10 @@ public class LaserGun : MonoBehaviour
             {
                 endPnt = hitInfo.point;
 
+
+                // sparks from laser
+                laserPS.gameObject.SetActive(true);
+                laserPS.transform.position = endPnt;
                 DrawLazer(hitInfo.point);
             }
 
