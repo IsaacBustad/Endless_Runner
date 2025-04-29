@@ -15,6 +15,7 @@ TagManager:
   - 
   - 
   - 
+  - IsGround
   - 
   - 
   - 
@@ -33,9 +34,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - test
+  - MiniMapCam
   - PostProcessing
   m_SortingLayers:
   - name: Default
